@@ -1,0 +1,60 @@
+[
+    {
+        "_id": "t101",
+        "name": "Talking Doll barbie",
+        "price": 123,
+        "labels": [
+            "Doll",
+            "Battery Powered",
+            "Baby"
+        ],
+        "createdAt": 1631031801011,
+        "inStock": true,
+        "msgs": [
+            "This is a funny msg"
+        ]
+    },
+    {
+        "_id": "t102",
+        "name": "Color sheets",
+        "price": 150,
+        "labels": [
+            "Art",
+            "Box game"
+        ],
+        "createdAt": 1631031814720,
+        "inStock": true
+    },
+    {
+        "_id": "t103",
+        "name": "Dinosaur puzzle",
+        "price": 95,
+        "labels": [
+            "Box game",
+            "Puzzle"
+        ],
+        "createdAt": 16314251801011,
+        "inStock": false
+    },
+    {
+        "_id": "t104",
+        "name": "Bicycle",
+        "price": 157,
+        "labels": [
+            "On wheels",
+            "Outdoor"
+        ],
+        "createdAt": 1637586201011,
+        "inStock": true
+    },
+    {
+        "name": "Spiderman",
+        "price": 80,
+        "labels": [
+            "Puzzele"
+        ],
+        "createdAt": 1695243095470,
+        "inStock": true,
+        "_id": "IixHB"
+    }
+]
