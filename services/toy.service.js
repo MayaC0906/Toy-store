@@ -12,7 +12,7 @@ export const toyService = {
 }
 
 function query(filterBy = {}) {
-    console.log(filterBy);
+    console.log(filterBy, 'fromback');
     let toysToReturn = toys
     if (filterBy.searchKey) {
         const regExp = new RegExp(filterBy.searchKey, 'i')
@@ -28,9 +28,18 @@ function query(filterBy = {}) {
         }
         else toysToReturn
     }
-    if (filterBy.toyLabel) {
-        console.log(filterBy.toyLabel);
-        toysToReturn = toysToReturn.filter(toy => toy.labels.includes(filterBy.toyLabel))
+    if (filterBy.toyLabels) {
+        toysToReturn = toysToReturn.filter(toy => {
+            return toy.labels.some(label => {
+                return filterBy.toyLabels.includes(label)
+            })
+        })
+
+
+
+
+        // const regExp = new RegExp(filterBy.toyLabels, 'i')
+        // toysToReturn = toysToReturn.filter(toy => regExp.test(toy.toyLabels))
     }
 
     if (filterBy.inStock) {

@@ -27,15 +27,15 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.use(cookieParser()) // for res.cookies
 app.use(express.json()) // for req.body
-// app.use(express.static('public'))
+app.use(express.static('public'))
 
 
 
 
 // List
 app.get('/api/toy', (req, res) => {
-    let { searchKey, sortBy, toyLabel, inStock } = req.query
-    const filterBy = { searchKey, sortBy, toyLabel, inStock }
+    let { searchKey, sortBy, toyLabels, inStock } = req.query
+    const filterBy = { searchKey, sortBy, toyLabels, inStock }
     toyService.query(filterBy)
         .then(toys => {
             res.send(toys)
