@@ -105,7 +105,7 @@ function getEmptyToy() {
     return {
         name: '',
         price: null,
-        labels: ['Puzzele'],
+        labels: ['Puzzle'],
         createdAt: Date.now(),
         inStock: true,
     }
