@@ -1,19 +1,5 @@
 [
     {
-        "_id": "t103",
-        "name": "Dinosaur puzzle",
-        "price": 95,
-        "labels": [
-            "Box game",
-            "Puzzle"
-        ],
-        "createdAt": 16314251801011,
-        "inStock": false,
-        "msgs": [
-            "This is a funny msg"
-        ]
-    },
-    {
         "_id": "t104",
         "name": "Bicycle",
         "price": 157,
@@ -22,7 +8,10 @@
             "Outdoor"
         ],
         "createdAt": 1637586201011,
-        "inStock": true
+        "inStock": true,
+        "msgs": [
+            "This is a funny msg"
+        ]
     },
     {
         "name": "Spiderman",
@@ -31,7 +20,35 @@
             "Puzzle"
         ],
         "createdAt": 1695243095470,
+        "inStock": false,
+        "_id": "IixHB",
+        "msgs": [
+            "This is a funny msg"
+        ]
+    },
+    {
+        "name": "Elsa",
+        "price": 180,
+        "labels": [
+            "Puzzle"
+        ],
+        "createdAt": 1695564353210,
+        "inStock": false,
+        "_id": "TD6CD",
+        "msgs": [
+            "This is a funny msg"
+        ]
+    },
+    {
+        "name": "met",
+        "price": 120,
+        "labels": [
+            "Box game",
+            "Baby",
+            "Puzzle"
+        ],
+        "createdAt": 1695661907453,
         "inStock": true,
-        "_id": "IixHB"
+        "_id": "cBzt5"
     }
 ]

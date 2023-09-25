@@ -28,18 +28,12 @@ function query(filterBy = {}) {
         }
         else toysToReturn
     }
-    if (filterBy.toyLabels) {
+    if (filterBy.labels) {
         toysToReturn = toysToReturn.filter(toy => {
             return toy.labels.some(label => {
-                return filterBy.toyLabels.includes(label)
+                return filterBy.labels.includes(label)
             })
         })
-
-
-
-
-        // const regExp = new RegExp(filterBy.toyLabels, 'i')
-        // toysToReturn = toysToReturn.filter(toy => regExp.test(toy.toyLabels))
     }
 
     if (filterBy.inStock) {
@@ -64,11 +58,13 @@ function remove(toyId) {
 
 }
 
-function save(toy, loggedinUser) {
+function save(toy) {
     if (toy._id) {
         const toyToUpdate = toys.find(currToy => currToy._id === toy._id)
         toyToUpdate.name = toy.name
         toyToUpdate.price = toy.price
+        toyToUpdate.labels = toy.labels
+        toyToUpdate.inStock = toy.inStock
     } else {
         toy._id = _makeId()
         toys.push(toy)
@@ -105,7 +101,7 @@ function getEmptyToy() {
     return {
         name: '',
         price: null,
-        labels: ['Puzzle'],
+        labels:['Puzzle'],
         createdAt: Date.now(),
         inStock: true,
     }

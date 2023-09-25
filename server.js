@@ -20,6 +20,8 @@ const corsOptions = {
         'http://localhost:5173',
         'http://127.0.0.1:5174',
         'http://localhost:5174',
+        'http://127.0.0.1:5175',
+        'http://localhost:5175'
     ],
     credentials: true
 }
@@ -34,8 +36,8 @@ app.use(express.static('public'))
 
 // List
 app.get('/api/toy', (req, res) => {
-    let { searchKey, sortBy, toyLabels, inStock } = req.query
-    const filterBy = { searchKey, sortBy, toyLabels, inStock }
+    let { searchKey, sortBy, labels, inStock } = req.query
+    const filterBy = { searchKey, sortBy, labels, inStock }
     toyService.query(filterBy)
         .then(toys => {
             res.send(toys)
@@ -48,9 +50,9 @@ app.get('/api/toy', (req, res) => {
 
 // Add
 app.post('/api/toy', (req, res) => {
-    const { name, price } = req.body
+    const { name, price, labels } = req.body
     let toy = toyService.getEmptyToy()
-    toy = { ...toy, name, price }
+    toy = { ...toy, name, price, labels }
     toyService.save(toy)
         .then(savedToy => {
             res.send(savedToy)
