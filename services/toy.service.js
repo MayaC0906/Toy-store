@@ -67,6 +67,7 @@ function save(toy) {
         toyToUpdate.inStock = toy.inStock
     } else {
         toy._id = _makeId()
+        toy.url = getRandImgUrl()
         toys.push(toy)
     }
 
@@ -101,8 +102,16 @@ function getEmptyToy() {
     return {
         name: '',
         price: null,
-        labels:['Puzzle'],
+        labels: ['Puzzle'],
         createdAt: Date.now(),
         inStock: true,
     }
+}
+
+function getRandImgUrl() {
+const imgUrls = ['https://freepngimg.com/thumb/categories/2432.png',
+'https://pngfre.com/wp-content/uploads/spider-man-png-from-pngfre-45-1-887x1024.png',
+'https://www.freepnglogos.com/uploads/toy-story-png/toy-story-buzz-robot-cartoon-png-photos-5.png']
+
+return imgUrls[utilService.getRandomIntInclusive(0,2)]
 }

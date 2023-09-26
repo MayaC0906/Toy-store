@@ -5,13 +5,16 @@
         "price": 157,
         "labels": [
             "On wheels",
-            "Outdoor"
+            "Outdoor",
+            "Baby",
+            "Doll"
         ],
         "createdAt": 1637586201011,
         "inStock": true,
         "msgs": [
             "This is a funny msg"
-        ]
+        ],
+        "url": "https://freepngimg.com/thumb/categories/2432.png"
     },
     {
         "name": "Spiderman",
@@ -24,7 +27,8 @@
         "_id": "IixHB",
         "msgs": [
             "This is a funny msg"
-        ]
+        ],
+        "url": "https://pngfre.com/wp-content/uploads/spider-man-png-from-pngfre-45-1-887x1024.png"
     },
     {
         "name": "Elsa",
@@ -37,7 +41,8 @@
         "_id": "TD6CD",
         "msgs": [
             "This is a funny msg"
-        ]
+        ],
+        "url": "https://www.freepnglogos.com/uploads/toy-story-png/toy-story-buzz-robot-cartoon-png-photos-5.png"
     },
     {
         "name": "met",
@@ -49,6 +54,21 @@
         ],
         "createdAt": 1695661907453,
         "inStock": true,
-        "_id": "cBzt5"
+        "_id": "cBzt5",
+        "url": "https://freepngimg.com/thumb/categories/2432.png",
+        "msgs": [
+            "This is a funny msg"
+        ]
+    },
+    {
+        "name": "maya",
+        "price": 150,
+        "labels": [
+            "Art"
+        ],
+        "createdAt": 1695759086872,
+        "inStock": true,
+        "_id": "0En0D",
+        "url": "https://pngfre.com/wp-content/uploads/spider-man-png-from-pngfre-45-1-887x1024.png"
     }
 ]
